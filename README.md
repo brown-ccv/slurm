@@ -1,5 +1,11 @@
 # SLURM workshop Feb 2020
 
+To clone this repository:
+
+````
+  git clone https://github.com/brown-ccv/slurm.git
+````
+
 ## Important Concepts
 
 #### Slurm instructions go at the start of the batch script
