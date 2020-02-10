@@ -49,12 +49,14 @@ cat <<EOF > poem_analysis.sh
 #SBATCH -o analysis_%a.out
 #SBATCH -e analysis_%a.out
 
-# Submit the check_results.sh script to run after this job completes
-sbatch --dependency=afterok:\$SLURM_JOB_ID check_results.sh
-
 # This gets the poem to work on from the list_of_poems
 poem="\`sed -n \${SLURM_ARRAY_TASK_ID}p list_of_poems\`"
 echo \$poem "slurm array task id is" \${SLURM_ARRAY_TASK_ID}
+
+# Submit the check_results.sh script to run after this job completes
+if [[ \${SLURM_ARRAY_TASK_ID} -eq $npoems ]]; then
+  sbatch --dependency=afterok:\$SLURM_JOB_ID check_results.sh
+fi
 
 # Here is our analysis: Does the poem have the word "love" in it?
 cd poems
@@ -69,5 +71,3 @@ EOF
 
 # submit our analysis scipt
 sbatch poem_analysis.sh
-
-
