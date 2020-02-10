@@ -103,17 +103,17 @@ a=1
 b='chicken_pot_pie'
 ````
 
-You can do arythmatic in bash
+You can do arithmetic in bash
 
 ````
 a=1
 echo $((a+2)) 
 ````
 
-You can use `*` to create arrays
+You can use filename expansion `*` (globbing).  e.g. in the example below an array "my_array" is created with`*`.  What does "my_array" contain?
 
 ````
-files=(*)
+my_array=(*)
 ````
 
 #### Small jobs vs loops vs job arrays
