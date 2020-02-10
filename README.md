@@ -47,7 +47,7 @@ You can have output and error going to the same file
 
 If you normally have figures pop up, you will need to save the figures to a file.  There is no screen to output figures to when using a batch script. 
 
-##### SBATCH features for nameing files
+##### SBATCH features for naming files
 
 SLURM provies several variables that you can use in your `SBATCH` commands.  A useful one is `%j` which expands to the job number.  Since every job has a unique job number, using `%j` guarantees that you won't overwrite your slurm output file if you resubmit the job.`%x` expands to the job name.  In the example below, the output file will be called `roast_beef-88888.out` and the error file will be called `roast_beef-888888.out`.
 
@@ -105,7 +105,7 @@ Review what resources your job actually used.  The more acurate you can be with 
 sacct -jl 888888
 `````
 
-On Oscar we have the command `myjobinfo` which 
+On Oscar we have the command `myjobinfo` which will give you a summary of the resources your job used. 
 
 
 # Job arrays
