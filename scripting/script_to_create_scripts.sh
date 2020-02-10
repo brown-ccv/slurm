@@ -55,9 +55,9 @@ sbatch --dependency=afterok:\$SLURM_JOB_ID check_results.sh
 poem="`sed -n \${SLURM_ARRAY_TASK_ID}p list_of_poems`"
 echo $poem "slurm array task id is" \${SLURM_ARRAY_TASK_ID}
 
-# Here is our analysis: Does the poem have the word "dog" in it?
-if grep dog $poem; then
-  echo "Poem" $poem " has the word dog"
+# Here is our analysis: Does the poem have the word "love" in it?
+if grep love $poem; then
+  echo "Poem" $poem " has the word love"
 else
   echo "FAILED"
 fi
