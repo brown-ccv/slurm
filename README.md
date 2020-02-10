@@ -105,7 +105,7 @@ Review what resources your job actually used.  The more acurate you can be with 
 sacct -jl 888888
 `````
 
-On Oscar we have the command `myjobinfo` which 
+On Oscar we have the command `myjobinfo` which will give you a summary of the resources your job used. 
 
 
 # Job arrays
