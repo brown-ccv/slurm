@@ -72,7 +72,7 @@ If you normally have figures pop up, you will need to save the figures to a file
 
 ##### SBATCH features for naming files
 
-SLURM provies several variables that you can use in your `SBATCH` commands.  A useful one is `%j` which expands to the job number.  Since every job has a unique job number, using `%j` guarantees that you won't overwrite your slurm output file if you resubmit the job.`%x` expands to the job name.  In the example below, the output file will be called `roast_beef-88888.out` and the error file will be called `roast_beef-888888.out`.
+SLURM provies several variables that you can use in your `SBATCH` commands.  A useful one is `%j` which expands to the job number.  Since every job has a unique job number, using `%j` guarantees that you won't overwrite your slurm output file if you resubmit the job.`%x` expands to the job name.  In the example below, the output file will be called `roast_beef-888888.out` and the error file will be called `roast_beef-888888.out`.
 
 ````
 #SBATCH -J roast_beef
