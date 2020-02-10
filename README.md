@@ -64,7 +64,8 @@ What would normally go to the screen goes to a file. You may have heard the term
 You can have output and error going to the same file
 
 ````
-#SBATCH -oe output.out
+#SBATCH -o output.out
+#SBATCH -e output.out
 ````
 
 If you normally have figures pop up, you will need to save the figures to a file.  There is no screen to output figures to when using a batch script. 
@@ -136,7 +137,7 @@ Job arrays are a great way to submit a bunch of similar jobs with one batch scri
 
 How does slurm do this?  Slurm sets a bunch of environemnt variables when you submit jobs.  Job arrays have an environement variable `SLURM_ARRAY_TASK_ID` which is set for each job in the array.  To see all the SLURM environment variables, you can look at the output from:
 
-`sbatch slurm-env.sh` 
+`sbatch env-slurm.sh` 
 
 How can we use the `SLURM_ARRY_TASK_ID` to set up our jobs?  There are several examples in the directory `job_array`.  
 
