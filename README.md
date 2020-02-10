@@ -8,6 +8,28 @@ To clone this repository:
 
 ## Important Concepts
 
+####  Batch scripts vs bash scripts
+
+Batch is 'batch processing' - running a bunch of things at once.  Batch scripts contain instructions for slurm, and the commands you want to run on the compute nodes. Batch scripts are submited to slurm like so:
+
+````
+sbatch my_script.sh
+````
+
+Bash scripts are (Borne Again) shell scripts. They are lists of instructions which are _exectuted_ when you run the script like so:
+
+````
+bash my_bash_script.sh
+````
+
+or if the bash script has been made executable  `chmod +x my_bash_script.sh`, bash scripts can be executed like so:
+
+````
+./my_bash_script.sh 
+````
+
+
+
 #### Slurm instructions go at the start of the batch script
 
 Any `#SBATCH` lines that come after a regular line are ignored. Make sure you put all your `SBATCH` lines at the start of the file.
@@ -61,9 +83,9 @@ SLURM provies several variables that you can use in your `SBATCH` commands.  A u
 
 #### Environement variables
 
-These are variables available to any program.  To see a list of environemnt variables currently set, do `env`.  There are many environemnt variables that you may find useful when writting scripts, such as USER, HOME.  Slurm sets a bunch of environemnt variables when you submit jobs. The example batch script `slurm-env.sh` finds all the SLURM environment variables.  You can submit this script and look at the output file to see which variables are set. 
+These are variables available to any program.  To see a list of environemnt variables currently set, do `env`.  There are many environemnt variables that you may find useful when writting scripts, such as USER, HOME.  Slurm sets a bunch of environemnt variables when you submit jobs. The example batch script `env-slurm.sh` finds all the SLURM environment variables.  You can submit this script and look at the output file to see which variables are set. 
 
-`sbatch slurm-env.sh` 
+`sbatch env-slurm.sh` 
 
 #### Bash syntax
 
