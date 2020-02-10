@@ -83,9 +83,9 @@ SLURM provies several variables that you can use in your `SBATCH` commands.  A u
 
 #### Environement variables
 
-These are variables available to any program.  To see a list of environemnt variables currently set, do `env`.  There are many environemnt variables that you may find useful when writting scripts, such as USER, HOME.  Slurm sets a bunch of environemnt variables when you submit jobs. The example batch script `slurm-env.sh` finds all the SLURM environment variables.  You can submit this script and look at the output file to see which variables are set. 
+These are variables available to any program.  To see a list of environemnt variables currently set, do `env`.  There are many environemnt variables that you may find useful when writting scripts, such as USER, HOME.  Slurm sets a bunch of environemnt variables when you submit jobs. The example batch script `env-slurm.sh` finds all the SLURM environment variables.  You can submit this script and look at the output file to see which variables are set. 
 
-`sbatch slurm-env.sh` 
+`sbatch env-slurm.sh` 
 
 #### Bash syntax
 
