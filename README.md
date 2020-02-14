@@ -1,5 +1,7 @@
 # SLURM workshop Feb 2020
 
+This workshop is for people who are already familiar with SLURM, but would like to use SLURM's more powerful features. 
+
 To clone this repository:
 
 ````
