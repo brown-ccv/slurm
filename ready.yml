@@ -1,0 +1,8 @@
+repo:             slurm
+site_name:        Advanced Slurm
+authors:      
+  - name: Helen Kershaw
+    github_user: hkershaw-brown
+site_description: This workshop is for people who are already familiar with SLURM, but would like to use SLURM's more powerful features. It covers dependent jobs, job arrays and scripting. 
+docs_url:         https://github.com/brown-ccv/slurm
+type:             workshop    # required. choose one of [software, tutorial, workshop, documentation]
