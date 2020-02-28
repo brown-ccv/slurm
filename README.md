@@ -9,9 +9,10 @@ To clone this repository:
 ````
 
 We will cover
-  * [Job arrays](#Job arrays) - submitting and managing collections of similar jobs
-  * [Dependent jobs](#Dependent jobs) - building pipelines of slurm jobs
-  * [Creating script to create batch scripts](#Scripting Scripts) - an example of scripting 
+
+* [Job arrays](#job-arrays) - submitting and managing collections of similar jobs 
+* [Dependent jobs](#dependent-jobs) - building pipelines of slurm jobs  
+* [Creating script to create batch scripts](#scripting-scripts) - an example of scripting 
 
 
 ## Important Concepts
@@ -137,7 +138,6 @@ sacct -jl 888888
 `````
 
 On Oscar we have the command `myjobinfo` which will give you a summary of the resources your job used. 
-
 
 # Job arrays
 
