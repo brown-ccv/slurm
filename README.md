@@ -8,6 +8,12 @@ To clone this repository:
   git clone https://github.com/brown-ccv/slurm.git
 ````
 
+We will cover
+  * [Job arrays](#Job arrays) - submitting and managing collections of similar jobs
+  * [Dependent jobs](#Dependent jobs) - building pipelines of slurm jobs
+  * [Creating script to create batch scripts](#Scripting Scripts) - an example of scripting 
+
+
 ## Important Concepts
 
 ####  Batch scripts vs bash scripts
