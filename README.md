@@ -1,4 +1,4 @@
-# SLURM workshop Feb 2020
+# Advanced Slurm
 
 This workshop is for people who are already familiar with SLURM, but would like to use SLURM's more powerful features. 
 
