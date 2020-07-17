@@ -28,7 +28,7 @@ tmpdir=~/matlab_temp_dir/$SLURM_ARRAY_TASK_ID
 
 mkdir -p $tmpdir
 
-matlab-threaded -nodisplay -nojvm -r "multi_parfor($tmpdir, $SLURM_ARRAY_TASK_ID), exit"
+matlab-threaded -nodisplay -r "multi_parfor('$tmpdir', $SLURM_ARRAY_TASK_ID), exit"
 
-rm $tmpdir
+rm -r $tmpdir
 

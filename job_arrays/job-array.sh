@@ -7,7 +7,7 @@
 #SBATCH -t 0:10:00
 
 # Provide index values (TASK IDs)
-#SBATCH --array=1-4
+#SBATCH --array=1-2
 
 # Use '%A' for array-job ID, '%J' for job ID and '%a' for task ID
 #SBATCH -e arrayjob-%a.err
