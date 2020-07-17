@@ -161,6 +161,8 @@ Use `myq` to view your job arrays in the queue.  Note the format `8888888_3`.
 
 `8888888` is the job number and `_3` is the array task id. You can cancel the whole array at once with 8888888, or individual arrays with `8888888_3`.
 
+A note on Matlab Parallel Computing Toolbox (PCT).  There is an example ` job-array-par-matlab.sh ` in the job_array folder for using Matlab PCT with job arrays which shows how to start multiple parpools without the Matlab instances interfering with each other. 
+
 # Dependent jobs
 
 Dependent jobs are a great tool when you have several stages in your data anaylsis.  Here we have a small example of a three step process. This example can be found in the directory `dependent_jobs`.  Step1 must finish successfully before Step2 starts, Step2 must be completed (successful or unsucessful) before Step3 starts.   
