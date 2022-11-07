@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# Resource request
 #SBATCH --time=00:05:00
-#SBATCH --mem=1G
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=4G
+
+# Job handling
 #SBATCH -J postprocessing
 #SBATCH -o %x-%j.out
 #SBATCH -e %x-%j.err
-#SBATCH -n 1
 
 # Run a command
 echo “Doing some postprocessing”
