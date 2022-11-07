@@ -1,8 +1,20 @@
 #!/bin/bash
 
+# Resource request
+#SBATCH --time=00:05:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=4G
+
+# Define array (TASK IDs)
 #SBATCH --array=1-4
-#SBATCH -o output_%A-%a
+
+# Job handling
+#SBATCH -J arrayjob-readline
+#SBATCH -o %x-%A_%a.out
 
 line="`sed -n ${SLURM_ARRAY_TASK_ID}p list_of_files`"
-echo $line "slurm array task id is" ${SLURM_ARRAY_TASK_ID}
+echo "Line number " ${SLURM_ARRAY_TASK_ID} "is :" $line
+
 
