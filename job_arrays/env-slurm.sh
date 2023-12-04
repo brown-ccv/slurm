@@ -9,7 +9,7 @@
 
 # Job handling
 #SBATCH -J slurm_env
-#SBATCH -o %x-%A_%a.out
+#SBATCH -o %x-%j.out
 
 # Slurm sets a bunch of environment variales
 # This script lists all the environment variables
