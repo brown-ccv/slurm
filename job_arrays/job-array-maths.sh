@@ -1,22 +1,21 @@
 #!/bin/bash
 
-# Job Name
-#SBATCH -J arrayjob 
-
-# Walltime requested
-#SBATCH -t 0:10:00
+# Resource request
+#SBATCH --time=00:05:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=4G
 
 # Provide index values (TASK IDs)
 #SBATCH --array=1-4
 
-# Use '%A' for array-job ID, '%J' for job ID and '%a' for task ID
-#SBATCH -e maths-%a.err
-#SBATCH -o maths-%a.out
-
-# single core
-#SBATCH -c 1
+# Job handling
+#SBATCH -J arrayjob-readline
+#SBATCH -o %x-%A_%a.out
 
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
  
 input=$((SLURM_ARRAY_TASK_ID*1000+2))
 echo "Running job array number: "$SLURM_ARRAY_TASK_ID "input " $input
+
