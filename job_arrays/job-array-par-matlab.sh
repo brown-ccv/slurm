@@ -15,6 +15,9 @@
 #SBATCH -J arrayjob-matlab
 #SBATCH -o %x-%A_%a.out
 
+# Load modules
+module load matlab/R2021a 
+
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
 
 # The defualt "Job Storage Location" for the Matlab Parallel Computing Toolbox (PCT)
