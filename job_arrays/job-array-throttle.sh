@@ -17,7 +17,7 @@
 
 # Using sleep here to make the job take more time so you can 
 # see the effect of throttling. 
-sleep 2
+sleep 30
 
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
 input=$((SLURM_ARRAY_TASK_ID*1000+2))
