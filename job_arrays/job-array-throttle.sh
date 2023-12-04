@@ -1,21 +1,19 @@
 #!/bin/bash
 
-# Job Name
-#SBATCH -J arrayjob 
-
-# Walltime requested
-#SBATCH -t 0:10:00
+# Resource request
+#SBATCH --time=00:05:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=4G
 
 # Provide index values (TASK IDs)
-# 4 array tasks, but only 2 can run simultaneously
+# 4 array tasks, but only 2 allowed to run simultaneously
 #SBATCH --array=1-4%2
 
-# Use '%A' for array-job ID, '%J' for job ID and '%a' for task ID
-#SBATCH -e throttle-%a.out
-#SBATCH -o throttle-%a.out
-
-# single core
-#SBATCH -c 1
+# Job handling
+#SBATCH -J arrayjob-throttle
+#SBATCH -o %x-%A_%a.out
 
 # Using sleep here to make the job take more time so you can 
 # see the effect of throttling. 
