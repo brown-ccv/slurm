@@ -7,6 +7,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=4G
 
+# Partition
+#SBATCH --partition=batch
+
 # Provide index values (TASK IDs)
 # 4 array tasks, but only 2 allowed to run simultaneously
 #SBATCH --array=1-4%2

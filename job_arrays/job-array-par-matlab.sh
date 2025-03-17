@@ -8,6 +8,9 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=4G
 
+# Partition
+#SBATCH --partition=batch
+
 # Provide index values (TASK IDs)
 #SBATCH --array=1-4
 
@@ -16,7 +19,7 @@
 #SBATCH -o %x-%A_%a.out
 
 # Load modules
-module load matlab/R2021a 
+module load matlab 
 
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
 
@@ -24,7 +27,7 @@ module load matlab/R2021a
 # is ~/.matlab/
 # When submiting multiple jobs with  PCT such as when using job arrays, you need to
 # create a unique temporary directory for each job
-tmpdir=~/matlab_temp_dir/$SLURM_ARRAY_TASK_ID
+tmpdir=/sss/jobtmp/$USER/matlab_temp_dir/$SLURM_ARRAY_TASK_ID
 
 mkdir -p $tmpdir
 

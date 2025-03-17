@@ -7,6 +7,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=4G
 
+# Partition
+#SBATCH --partition=batch
+
 # Job handling
 #SBATCH -J slurm_env
 #SBATCH -o %x-%j.out
