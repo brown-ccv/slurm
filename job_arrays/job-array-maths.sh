@@ -14,7 +14,7 @@
 #SBATCH --array=1-4
 
 # Job handling
-#SBATCH -J arrayjob-readline
+#SBATCH -J arrayjob-maths
 #SBATCH -o %x-%A_%a.out
 
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
