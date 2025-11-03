@@ -16,4 +16,5 @@
 #SBATCH -e %x-%j.err
 
 # Run a command
+sleep 30
 echo “Doing some postprocessing”

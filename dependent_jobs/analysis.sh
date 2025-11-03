@@ -17,5 +17,7 @@
 
 # Run a command
 echo "Lots of lovely science"
+sleep 15
 echo "Cutting edge research"
+sleep 5
 echo "Algorithms"
