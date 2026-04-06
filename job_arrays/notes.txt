@@ -1,0 +1,10 @@
+1. env-slurm.sh | SLURM environment variables
+2. env-slurm-array.sh | SLURM environment variables plus array job variables
+3. job-array.sh | simple array job with sequential #'s
+4. job-array-throttle.sh | limit # of array jobs running at a single time
+5. job-array-nonsequential.sh | simple array job with non-sequential #'s
+6. job-array-maths.sh | modifying array job #s w/simple math
+7. job-array-variable.sh | using array job # to access elements of an array | note: Array starts at 0 for indexing
+8. job-array-line-from-file.sh | using array job # to access lines in a file
+9. job-array-par-matlab.sh | using array job # to create unique TEMP directories for each job (e.g., MATLAB) | note: CPUS per task=2
+ 
