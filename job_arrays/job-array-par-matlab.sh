@@ -33,5 +33,7 @@ mkdir -p $tmpdir
 
 matlab-threaded -nodisplay -r "multi_parfor('$tmpdir', $SLURM_ARRAY_TASK_ID), exit"
 
+echo $tmpdir
+
 rm -r $tmpdir
 

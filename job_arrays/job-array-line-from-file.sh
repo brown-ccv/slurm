@@ -18,6 +18,6 @@
 #SBATCH -o %x-%A_%a.out
 
 line="`sed -n ${SLURM_ARRAY_TASK_ID}p list_of_files`"
-echo "Line number " ${SLURM_ARRAY_TASK_ID} "is :" $line
+echo "Line number "${SLURM_ARRAY_TASK_ID} "is: "$line
 
 

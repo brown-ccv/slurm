@@ -20,5 +20,5 @@
 # Use the $SLURM_ARRAY_TASK_ID variable to provide different inputs for each job
  
 input=$((SLURM_ARRAY_TASK_ID*1000+2))
-echo "Running job array number: "$SLURM_ARRAY_TASK_ID "input " $input
+echo "Job array number: "$SLURM_ARRAY_TASK_ID " | input: "$input
 

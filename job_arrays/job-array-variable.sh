@@ -19,4 +19,4 @@
 
 input=(A B C D E)
 
-echo "Hello I am doing science with "  ${input[$SLURM_ARRAY_TASK_ID]}
+echo "Job array number: "$SLURM_ARRAY_TASK_ID " | input: "${input[$SLURM_ARRAY_TASK_ID]}

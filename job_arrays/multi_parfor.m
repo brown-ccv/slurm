@@ -14,3 +14,5 @@ parpool(pc, str2num(getenv('SLURM_CPUS_PER_TASK')));
 parfor i = 1:100
     ones(10,10)
 end
+
+
